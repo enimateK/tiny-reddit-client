@@ -1,0 +1,55 @@
+<div class="navbar navbar-default has-border">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav navbar-left" id="topofthePage">
+      <li>
+        <a class="navbar-brand" (click)="goHome()">
+          <img src="assets/img/reddit.png" height="50px">
+        </a>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a href="javascript:void(0)" (click)="showLoginModal()">
+          <span *ngIf="!isConnected">Login</span>
+        </a>
+        <span *ngIf="isConnected">{{currentUser.mail}}</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div *ngIf="isLoginModalShown"
+     class="modal fade" bsModal
+     #loginModal="bs-modal"
+     tabindex="-1"
+     [config]="{show: true}"
+     role="dialog"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left" i18n>Login</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="loginModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form #signinForm="ngForm">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" [(ngModel)]="currentUser.mail" name="mail">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" (click)="loginModal.hide()" i18n>Cancel</button>
+        <button class="btn btn-success" type="submit" (click)="login()">Login</button>
+      </div>
+    </div>
+  </div>
+</div>

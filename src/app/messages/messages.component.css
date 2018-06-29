@@ -1,0 +1,63 @@
+.navbar {
+  margin: 0;
+  border-radius: 0;
+  border-bottom-width: 1px;
+  height: 50px;
+}
+
+.navbar-brand {
+  padding: 0;
+  margin-left: 0 !important;
+  cursor: pointer;
+}
+
+.navbar-brand > img {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.navbar-nav > li, .navbar-nav {
+  margin: 0;
+  float: left !important;
+}
+
+.navbar-right {
+  float: right!important;
+}
+
+.message-list {
+  width: 100%;
+  display: block;
+}
+
+.message {
+  width: 600px;
+  margin: auto auto 20px;
+  display: block;
+}
+
+.message-info {
+  width: 600px;
+  padding: 5px;
+  word-wrap: break-word;
+}
+
+.message-user {
+  Font-Weight: Bold;
+}
+
+button {
+  display: inline-block;
+  margin: 3px;
+}
+
+p {
+  display: inline-block;
+  margin: 3px;
+}
+
+h4 {
+  text-align: center;
+  display:block;
+  margin: auto auto 50px;
+}

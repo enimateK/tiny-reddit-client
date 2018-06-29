@@ -1,0 +1,21 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 20px;
+  background-color: #f8f8f8;
+  border-top-width: 1px;
+}
+
+.text-center {
+  height: 100%;
+  color: #777;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.heart {
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #d9534f;
+}

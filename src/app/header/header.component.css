@@ -1,0 +1,26 @@
+.navbar {
+  margin: 0;
+  border-radius: 0;
+  border-bottom-width: 1px;
+  height: 70px;
+}
+
+.navbar-brand {
+  padding: 0;
+  margin-left: 0 !important;
+  cursor: pointer;
+}
+
+.navbar-brand > img {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.navbar-nav > li, .navbar-nav {
+  margin: 0;
+  float: left !important;
+}
+
+.navbar-right {
+  float: right!important;
+}
